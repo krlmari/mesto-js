@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pages/index.css" />
+  <title>mesto</title>
+</head>
+
+<body class="root">
+  <div class="page">
+
+    <header class="header">
+      <a href="#"><img src="images/header__logo.svg" alt="" class="header__logo" /></a>
+    </header>
+
+    <main class="content">
+
+      <section class="profile">
+        <div class="profile__info">
+          <img src="images/profile__avatar.jpg" alt="" class="profile__avatar" />
+          <div class="profile__text">
+            <div class="profile__name-and-edit">
+              <p class="profile__name">Жак-Ив Кусто</p>
+              <button class="profile__edit-button"></button>
+            </div>
+            <p class="profile__description">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+
+      <section class="elements">
+        <div class="elements__element">
+          <img src="images/elements__dombay.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Домбай</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+
+        <div class="elements__element">
+          <img src="images/elements__karachaevsk.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Карачевск</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+
+        <div class="elements__element">
+          <img src="images/elements__mountain-elbrus.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Гора Эльбрус</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+
+        <div class="elements__element">
+          <img src="images/elements__dombay.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Домбай</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+
+        <div class="elements__element">
+          <img src="images/elements__karachaevsk.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Карачевск</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+
+        <div class="elements__element">
+          <img src="images/elements__mountain-elbrus.jpg" alt="" class="elements__image" />
+          <div class="elements__container">
+            <p class="elements__name">Гора Эльбрус</p>
+            <div class="elements__heart"></div>
+          </div>
+        </div>
+    
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
+
+
+    <div class="popup">
+      <div class="popup__container">
+
+        <form action="" class="form">
+          <h2 class="form__header">Редактировать профиль</h2>
+
+          <fieldset class="form__feild">
+            <input type="text" class="form__input form__input-name" id="profile-name" arial-label="Name" placeholder="Жак-Ив Кусто" name="name" required minlength="2" maxlength="40">
+            <input type="text" class="form__input form__input-name-description" id="profile-description" arial-label="Description" placeholder="Исследователь океана" name="description" required minlength="2" maxlength="40">
+            <button class="form__save-button">Сохранить</button>
+          </fieldset>
+
+          <button class="form__close-button"></button>
+        </form>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>
