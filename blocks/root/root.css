@@ -8,7 +8,7 @@ p {
 .body__overflow {
 	padding-right: 17px;
 	overflow: hidden;
-	height: 100vh;
+	-webkit-overflow: hidden;
 }
 
 .root {
