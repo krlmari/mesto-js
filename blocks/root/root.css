@@ -5,6 +5,12 @@ p {
 	padding: 0;
 }
 
+.body__overflow {
+	padding-right: 17px;
+	overflow: hidden;
+	height: 100vh;
+}
+
 .root {
 	min-width: 320px;
 	max-width: 1280px;
