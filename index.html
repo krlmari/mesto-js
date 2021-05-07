@@ -13,14 +13,14 @@
   <div class="page">
 
     <header class="header">
-      <a href="#"><img src="images/header__logo.svg" alt="" class="header__logo" /></a>
+      <a href="#" class="header__href"><img src="images/header__logo.svg" alt="logo" class="header__logo" /></a>
     </header>
 
     <main class="content">
 
       <section class="profile">
         <div class="profile__info">
-          <img src="images/profile__avatar.jpg" alt="" class="profile__avatar" />
+          <img src="images/profile__avatar.jpg" alt="avatar" class="profile__avatar" />
           <div class="profile__text">
             <div class="profile__name-and-edit">
               <p class="profile__name">Жак-Ив Кусто</p>
@@ -33,85 +33,77 @@
       </section>
 
       <section class="elements">
-        <div class="elements__element">
-          <img src="images/Hawaii-USA.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Гаваи</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-
-        <div class="elements__element">
-          <img src="images/innsbruck.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Инсбрук</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-
-        <div class="elements__element">
-          <img src="images/michigan.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Мичиган</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-
-        <div class="elements__element">
-          <img src="images/Lofoten.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Лофотен</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-
-        <div class="elements__element">
-          <img src="images/múlafossur.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Мулафоссур</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-
-        <div class="elements__element">
-          <img src="images/ngong-ping.jpg" alt="" class="elements__image" />
-          <div class="elements__container">
-            <p class="elements__name">Нгонг Пинг</p>
-            <div class="elements__heart"></div>
-          </div>
-        </div>
-    
+        <template id="elements-template">
+          <div class="elements__element">
+            <img src="" alt="image" class="elements__image"/>
+            <button class="elements__delete"></button>
+            <div class="elements__container">
+              <p class="elements__name">Гаваи</p>
+              <div class="elements__like"></div>
+            </div>
+        </template>
       </section>
+
     </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-
-    <div class="popup">
+    <div class="popup popup-profile">
       <div class="popup__container">
-
-        <form action="" class="form">
+        <form action="" class="form" novalidate>
           <h2 class="form__header">Редактировать профиль</h2>
-
           <fieldset class="form__feild">
-            <input type="text" class="form__input form__input-name" id="profile-name" arial-label="Name" placeholder="Жак-Ив Кусто" name="name" required minlength="2" maxlength="40">
-            <input type="text" class="form__input form__input-name-description" id="profile-description" arial-label="Description" placeholder="Исследователь океана" name="description" required minlength="2" maxlength="40">
-            <button class="form__save-button" type='submit'>Сохранить</button>
+            <div class="form__conteiner">
+
+              <input type="text" class="form__input form__input-up" id="input-name" arial-label="Name" placeholder="Жак-Ив Кусто" name="name" required minlength="2" maxlength="40">
+              <span class="input-name-error form__input-error"></span>
+
+              <input type="text" class="form__input form__input-down" id="input-description" arial-label="Description" placeholder="Исследователь океана" name="description" required minlength="2" maxlength="200">
+              <span class="input-description-error form__input-error"></span>
+
+              </div>
+            <button class="form__save-button" type="submit">Сохранить</button>
           </fieldset>
-
-          <button class="form__close-button"></button>
+          <button class="form__close-button" type="button"></button>
         </form>
-
       </div>
     </div>
 
+    <div class="popup popup-mesto">
+      <div class="popup__container">
+        <form action="" class="form" novalidate>
+          <h2 class="form__header">Новое место</h2>
+          <fieldset class="form__feild">
+            <div class="form__conteiner">
 
-    
+              <input type="text" class="form__input form__input-up form__input_title" id="input-title" arial-label="Title" placeholder="Название" name="title" required minlength="2" maxlength="30">
+              <span class="input-title-error form__input-error"></span>
+
+              <input type="url" class="form__input form__input-down form__input_src" id="input-src" arial-label="Src" placeholder="Ссылка на картинку" name="src" required>
+              <span class="input-src-error form__input-error"></span>
+
+          </div>
+            <button class="form__save-button" type="submit">Сохранить</button>
+          </fieldset>
+          <button class="form__close-button close-button" type="button"></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup__card">
+      <div class="popup__card_content">
+        <img src="" alt="popup__card_image" class="popup__card_image">
+        <p class="popup__card_text"></p>
+        <button class="close-button popup__card_close-button"></button>
+      </div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
+  <script src="validate.js"></script>
 </body>
 
 </html>

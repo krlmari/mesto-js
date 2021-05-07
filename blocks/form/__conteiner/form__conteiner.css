@@ -1,0 +1,15 @@
+.form__conteiner {
+  padding: 0 36px;
+}
+
+@media screen and (max-width: 580px) {
+  .form__conteiner {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .form__input-error {
+    padding: 22px;
+  }
+}

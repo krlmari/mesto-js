@@ -1,5 +1,10 @@
 .elements__image {
-	width: 282px;
-	height: 292px;
-	border-radius: 10px 10px 0 0;
+  opacity: 0.8;
+  float: right;
+  position: relative;
+  width: 282px;
+  height: 292px;
+  border-radius: 10px 10px 0 0;
+
+  cursor: pointer;
 }
