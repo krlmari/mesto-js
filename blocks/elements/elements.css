@@ -1,5 +1,4 @@
 .elements {
-	padding: 0 18px;
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 282px);
