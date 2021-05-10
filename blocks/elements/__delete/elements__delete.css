@@ -1,20 +1,27 @@
 .elements__delete {
-  border: none;
-  background-color: transparent;
-  background-size: cover;
-  background-image: url(../../../images/delete.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 18px;
-  height: 19.3px;
-  margin-left: 249px;
-  margin-top: 18px;
-  position: absolute;
+	border: none;
+	background-color: transparent;
+	background-size: cover;
+	background-image: url(../../../images/delete.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 18px;
+	height: 19.3px;
+	margin-left: 249px;
+	margin-top: 18px;
+	position: absolute;
 
-  transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 }
 
 .elements__delete:hover {
-  opacity: 0.7;
-  cursor: pointer;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 580px) {
+	.elements__delete {
+		margin-left: 0;
+		right: 20px;
+	}
 }
