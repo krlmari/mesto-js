@@ -1,0 +1,9 @@
+.form__input-up {
+	margin-top: 54px;
+}
+
+@media screen and (max-width: 580px) {
+	.form__input-up {
+		margin-top: 75px;
+	}
+}
