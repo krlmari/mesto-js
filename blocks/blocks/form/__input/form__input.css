@@ -1,0 +1,15 @@
+.form__input {
+	outline: none;
+	border: none;
+	width: 358px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 580px) {
+	.form__input {
+		margin-left: 22px;
+		width: 238px;
+	}
+}
+
+

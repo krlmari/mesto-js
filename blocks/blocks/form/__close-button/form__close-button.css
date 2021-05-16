@@ -1,0 +1,35 @@
+.form__close-button,
+.close-button {
+  background: transparent;
+  position: absolute;
+  background-image: url(../../../images/close-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  height: 40px;
+  width: 40px;
+  right: -10%;
+  bottom: 100%;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s linear;
+}
+
+.form__close-button:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 580px) {
+  .form__close-button {
+    right: 0;
+    bottom: 105%;
+    height: 26px;
+    width: 26px;
+  }
+}
+
+.popup__card_close-button {
+  top: -40px;
+  right: -40px;
+}

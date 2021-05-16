@@ -1,0 +1,22 @@
+.elements__like {
+	background-image: url(../../../images/elements__heart.svg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 19px;
+	transition: opacity 0.2s linear;
+}
+
+.elements__like:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.elements__like_active {
+	background-image: url(../../../images/elements__heart-active.svg);
+}
+
+.elements__like_active:hover {
+	opacity: 1;
+}

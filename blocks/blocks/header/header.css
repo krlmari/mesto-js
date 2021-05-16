@@ -1,0 +1,13 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 119px;
+	border-bottom: 1px solid #545454;
+}
+
+@media screen and (max-width: 880px) {
+	.header {
+		min-height: 84px;
+	}
+}
