@@ -56,21 +56,6 @@ function addCard(nameCard, linkCard) {
   return card.generateCard();
 }
 
-/*
-initialCards.reverse().forEach(function (element) {
-  prependCard(addCard(element.name, element.link));
-});
-*/
-
-
-/*
-
-function prependCard(element) {
-  elementsList.prepend(element);
-}
-
-*/
-
 
 
 const popupMesto = new Popup(".popup-mesto");
@@ -110,13 +95,12 @@ formProfile.addEventListener("submit", submitFormProfile);
 */
 
 
-/*
+
 function openPopupCard(link, name) {
   cardImagePopup.src = link;
   cardTextPopup.textContent = name;
-  openPopup(popupCard);
 }
-*/
+
 
 
 popupList.forEach((popup) => {
