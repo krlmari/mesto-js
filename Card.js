@@ -1,9 +1,16 @@
-class Card {
-  constructor(nameCard, linkCard, cardSelector, clickCallback) {
+export default class Card {
+  constructor(
+    nameCard,
+    linkCard,
+    cardSelector,
+    clickCallback,
+    handleCardClick
+  ) {
     this._nameCard = nameCard;
     this._linkCard = linkCard;
     this._cardSelector = cardSelector;
     this._clickCallback = clickCallback;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -15,7 +22,7 @@ class Card {
     return cardElement;
   }
 
-  _popupCard() {
+  _openPopupCard() {
     popup.classList.add("popup__opened");
     document.body.classList.add("body__overflow");
   }
@@ -59,5 +66,3 @@ class Card {
     return this._cardElement;
   }
 }
-
-export default Card;
