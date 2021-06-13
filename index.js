@@ -34,13 +34,43 @@ const initialCards = [
 ];
 
 
-/*
 
+const cardList = new Section({ 
+    items: initialCards,
+    renderer: (element) => {
+    cardList.addItem(addCard(element.name, element.link));
+  },
+}, '.elements');
+
+cardList.renderItems();
+
+
+
+function addCard(nameCard, linkCard) {
+  const card = new Card(
+    nameCard,
+    linkCard,
+    "#elements-template",
+    openPopupCard
+  );
+  return card.generateCard();
+}
+
+/*
 initialCards.reverse().forEach(function (element) {
   prependCard(addCard(element.name, element.link));
 });
+*/
+
+
+/*
+
+function prependCard(element) {
+  elementsList.prepend(element);
+}
 
 */
+
 
 
 const popupMesto = new Popup(".popup-mesto");
@@ -79,35 +109,13 @@ formProfile.addEventListener("submit", submitFormProfile);
 // Add cards:
 */
 
-/*
 
+/*
 function openPopupCard(link, name) {
   cardImagePopup.src = link;
   cardTextPopup.textContent = name;
   openPopup(popupCard);
 }
-
-*/
-
-
-
-function addCard(nameCard, linkCard) {
-  const card = new Card(
-    nameCard,
-    linkCard,
-    "#elements-template",
-    openPopupCard
-  );
-  return card.generateCard();
-}
-
-
-/*
-
-function prependCard(element) {
-  elementsList.prepend(element);
-}
-
 */
 
 
