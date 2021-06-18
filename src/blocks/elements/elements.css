@@ -1,3 +1,9 @@
+@import url(__container/elements__container.css);
+@import url(__like/elements__like.css);
+@import url(__image/elements__image.css);
+@import url(__name/elements__name.css);
+@import url(__delete/elements__delete.css);
+
 .elements {
 	position: relative;
 	display: grid;
