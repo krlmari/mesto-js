@@ -1,0 +1,11 @@
+@import url(_content/popup__card_content.css);
+@import url(_image/popup__card_image.css);
+@import url(_text/popup__card_text.css);
+
+.popup__card {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.9);
+}
