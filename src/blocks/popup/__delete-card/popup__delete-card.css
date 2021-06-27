@@ -1,0 +1,18 @@
+.popup__delete-container {
+	top: 30%;
+	margin: auto;
+	width: 430px;
+	min-height: 181px;
+}
+
+.popup__delete-text {
+	position: absolute;
+	margin: 34px 36px 124px 36px;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+}
