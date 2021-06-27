@@ -62,7 +62,6 @@ openCardPopup.setEventListeners();
 
 Promise.all([ api.getInitalCards(), api.getInitalInfo() ])
 	.then(([ cards, info ]) => {
-		console.log(cards);
 		currentUserId = info._id;
 		userInfo.setUserInfo(info);
 		cardList = new Section(
@@ -100,7 +99,6 @@ const addCardPopup = new PopupWithForm('.popup-mesto', mestoFormValidator, {
 	submitForm: () => {
 		addCardPopup.renderLoading(true);
 		const inputValues = addCardPopup.getInputValues();
-		console.log(inputValues);
 		api
 			.addNewCards(inputValues)
 			.then((data) => {
@@ -122,14 +120,11 @@ const addInfoPopup = new PopupWithForm('.popup-profile', profileFormValidator, {
 	submitForm: () => {
 		addInfoPopup.renderLoading(true);
 		const inputValues = addInfoPopup.getInputValues();
-		console.log(inputValues);
 		api
 			.updateUserInfo(inputValues)
 			.then((data) => {
 				userInfo.setUserInfo(data);
 				addInfoPopup.close();
-
-				console.log(data);
 			})
 			.catch((err) => console.log(`Что-то пошло не так: ${err}`))
 			.finally(() => {
@@ -140,15 +135,12 @@ const addInfoPopup = new PopupWithForm('.popup-profile', profileFormValidator, {
 addInfoPopup.setEventListeners();
 editButton.addEventListener('click', () => addInfoPopup.open());
 
-/* */
-
 /* Обновление аватара пользователя */
 
 const addAvatarPopup = new PopupWithForm('.popup__update-avatar-form', avatarFormValidator, {
 	submitForm: () => {
 		addAvatarPopup.renderLoading(true);
 		const inputValue = addAvatarPopup.getInputValues();
-		console.log(inputValue);
 		api
 			.updateUserAvatar(inputValue)
 			.then((data) => {
@@ -163,8 +155,6 @@ const addAvatarPopup = new PopupWithForm('.popup__update-avatar-form', avatarFor
 });
 addAvatarPopup.setEventListeners();
 editButtonAvatar.addEventListener('click', () => addAvatarPopup.open());
-
-/* */
 
 /* Удаление карточки по id:  */
 
