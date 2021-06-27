@@ -80,7 +80,6 @@ export default class Card {
 			this._cardElement
 				.querySelector('.elements__like')
 				.classList.add('elements__like_active');
-			this._setEventListeners();
 		}
 
 		return this._cardElement;
