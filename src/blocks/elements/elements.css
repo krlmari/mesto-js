@@ -3,6 +3,7 @@
 @import url(__image/elements__image.css);
 @import url(__name/elements__name.css);
 @import url(__delete/elements__delete.css);
+@import url(__count-like/elements__count-like.css);
 
 .elements {
 	position: relative;
@@ -12,7 +13,14 @@
 	gap: 18px 18px;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
+	.elements {
+		margin: 0 20px;
+		grid-template-columns: repeat(auto-fit, 330px);
+	}
+}
+
+@media screen and (max-width: 400px) {
 	.elements {
 		margin: 0 20px;
 		grid-template-columns: repeat(auto-fit, 100%);

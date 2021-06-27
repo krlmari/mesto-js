@@ -1,4 +1,6 @@
 .elements__delete {
+	visibility: hidden;
+	opacity: 0;
 	border: none;
 	background-color: transparent;
 	background-size: cover;
@@ -24,4 +26,9 @@
 		margin-left: 0;
 		right: 20px;
 	}
+}
+
+.elements__delete-active {
+	visibility: visible;
+	opacity: 1;
 }
