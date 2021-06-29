@@ -90,12 +90,15 @@ const selectors = {
 };
 
 const profileFormValidator = new FormValidator(selectors, formProfile);
+profileFormValidator.enableValidation();
 const mestoFormValidator = new FormValidator(selectors, formMesto);
+mestoFormValidator.enableValidation();
 const avatarFormValidator = new FormValidator(selectors, formAvatar);
+avatarFormValidator.enableValidation();
 
 /* Добавить новую карточку из формы: */
 
-const addCardPopup = new PopupWithForm('.popup-mesto', mestoFormValidator, {
+const addCardPopup = new PopupWithForm('.popup-mesto', {
 	submitForm: () => {
 		addCardPopup.renderLoading(true);
 		const inputValues = addCardPopup.getInputValues();
@@ -103,7 +106,7 @@ const addCardPopup = new PopupWithForm('.popup-mesto', mestoFormValidator, {
 			.addNewCards(inputValues)
 			.then((data) => {
 				cardList.addItem(addCard(data));
-				addCardPopup.closePopupWithNewCard();
+				addCardPopup.close();
 			})
 			.catch((err) => console.log(`Что-то пошло не так: ${err}`))
 			.finally(() => {
@@ -116,7 +119,7 @@ addButton.addEventListener('click', () => addCardPopup.open());
 
 /* Обновить информацию на сервере о пользователе из формы: */
 
-const addInfoPopup = new PopupWithForm('.popup-profile', profileFormValidator, {
+const addInfoPopup = new PopupWithForm('.popup-profile', {
 	submitForm: () => {
 		addInfoPopup.renderLoading(true);
 		const inputValues = addInfoPopup.getInputValues();
@@ -137,7 +140,7 @@ editButton.addEventListener('click', () => addInfoPopup.open());
 
 /* Обновление аватара пользователя */
 
-const addAvatarPopup = new PopupWithForm('.popup__update-avatar-form', avatarFormValidator, {
+const addAvatarPopup = new PopupWithForm('.popup__update-avatar-form', {
 	submitForm: () => {
 		addAvatarPopup.renderLoading(true);
 		const inputValue = addAvatarPopup.getInputValues();
