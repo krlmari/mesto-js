@@ -29,16 +29,12 @@ export default class Card {
 		this._cardElement.querySelector('.elements__like').addEventListener('click', () => {
 			const likeButton = this._cardElement.querySelector('.elements__like');
 			const likeCounter = this._cardElement.querySelector('.elements__count-like');
-			let isLiked;
 
-			if (likeButton.classList.contains('elements__like_active')) {
-				isLiked = true;
-			} else isLiked = false;
-
-			this._handleCardLike(isLiked, this._data._id)
+			this._handleCardLike(this._isLiked(), this._data._id)
 				.then((data) => {
 					likeButton.classList.toggle('elements__like_active');
-					likeCounter.textContent = `${data.likes.length}`;
+					likeCounter.textContent = data.likes.length;
+					this._data.likes = data.likes;
 				})
 				.catch((err) => console.log(`Что-то пошло не так: ${err}`));
 		});
@@ -66,6 +62,10 @@ export default class Card {
 			);
 	}
 
+	_isLiked() {
+		return this._data.likes.some((like) => like._id === this._currentUserId);
+	}
+
 	generateCard() {
 		this._cardElement = this._getTemplate();
 		this._setEventListeners();
@@ -76,7 +76,7 @@ export default class Card {
 		this._cardElement.querySelector('.elements__count-like').textContent = `${this._data.likes
 			.length}`;
 
-		if (this._data.likes.find((like) => like._id === this._currentUserId)) {
+		if (this._isLiked()) {
 			this._cardElement
 				.querySelector('.elements__like')
 				.classList.add('elements__like_active');

@@ -1,10 +1,9 @@
 import Popup from './Popup.js';
 
 export default class PopupWithForm extends Popup {
-	constructor(selectorPopup, validation, { submitForm }) {
+	constructor(selectorPopup, { submitForm }) {
 		super(selectorPopup);
 		this._submitForm = submitForm;
-		this._validation = validation;
 		this._formPopup = this._popup.querySelector('.form');
 		this._inputList = this._popup.querySelectorAll('.form__input');
 		this._buttonSubmit = this._formPopup.querySelector('.form__save-button');
@@ -12,7 +11,6 @@ export default class PopupWithForm extends Popup {
 
 	open() {
 		super.open();
-		this._validation.enableValidation();
 	}
 
 	renderLoading(isLoading) {
@@ -44,9 +42,5 @@ export default class PopupWithForm extends Popup {
 	close() {
 		super.close();
 		this._formPopup.reset();
-	}
-
-	closePopupWithNewCard() {
-		super.close();
 	}
 }
